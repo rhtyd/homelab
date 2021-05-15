@@ -17,7 +17,7 @@ cloudpi.x32.in services:
 - nfs (500G T5)
 - munin (monitoring)
 
-TODO: (things I don't need :D )
+TODO: (things I don't need :D ) https://www.reddit.com/r/homelab/wiki/software
 - Homer dashboard?
 - https://gitea.io
 - jenkins or other CI?
@@ -35,6 +35,16 @@ TODO: (things I don't need :D )
 - IP sec-cams?
 - deluge + plex? https://jellyfin.org? https://emby.media? couchpotato
 - Experiment: django/postgres app
+
+To play with:
+- https://www.ovirt.org/
+- https://www.proxmox.com/en/proxmox-ve
+- https://www.nutanix.com/products/community-edition
+- http://www.openvswitch.org/
+- pfsense, opnsense, vyos
+- Duplicati
+- IPAM: https://netbox.readthedocs.io/en/stable/
+- https://github.com/awesome-selfhosted/awesome-selfhosted
 
 ### VMs
 
