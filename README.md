@@ -1,7 +1,8 @@
 # homelab
 
 IaaS setup: https://rohityadav.cloud/blog/cloudstack-rpi4-kvm/
-DDNS/domain: x32.in (private), https://yadav.cloud (public)
+
+DDNS/domain: x32.in (private), yadav.cloud (public)
 
 Nodes:
 - cloudpi.x32.in: 4G 4C
@@ -10,11 +11,11 @@ Nodes:
 - 2xrpi2 (deprecated)
 
 cloudpi.x32.in services:
-cloudstack-management + MySQL
-nfs (500G T5)
-ddns (cloudflare)
-apache2 (file sharing, ssl/letsencrypt + reverse proxy)
-munin (monitoring)
+- cloudstack-management + MySQL
+- ddns (cloudflare)
+- apache2 (file sharing, ssl/letsencrypt + reverse proxy)
+- nfs (500G T5)
+- munin (monitoring)
 
 TODO: (things I don't need :D )
 - Homer dashboard?
@@ -108,7 +109,7 @@ add the following and apply the yaml:
 ```
 
 Gitops experiment:
-https://github.com/yadavcloud/hello-k3s/actions
-https://hub.docker.com/r/bhaisaab/hello-k3s
-Public app: https://yadav.cloud/app
-Private app: http://hello.x32.in
+- https://github.com/yadavcloud/hello-k3s/actions
+- https://hub.docker.com/r/bhaisaab/hello-k3s
+- Public app: https://yadav.cloud/app
+- Private app: http://hello.x32.in
