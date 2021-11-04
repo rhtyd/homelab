@@ -5,32 +5,18 @@ IaaS setup: https://rohityadav.cloud/blog/cloudstack-rpi4-kvm/
 DDNS/domain: x32.in (private), yadav.cloud (public)
 
 Nodes:
-- cloudpi.x32.in: 4G 4C
+- cloudpi.x32.in: 8G 4C
 - pikvm1.x32.in: 8G, 4C
 - pikvm2.x32.in: 8G, 4C
-- 2xrpi2 (deprecated)
-
-cloudpi.x32.in services:
-- cloudstack-management + MySQL
-- ddns (cloudflare)
-- apache2 (file sharing, ssl/letsencrypt + reverse proxy)
-- nfs (500G T5)
-- munin (monitoring)
+- pikvm3.x32.in: 8G, 4C
+- kubepi.ya3.in: 4G 4C
 
 TODO: (things I don't need :D ) https://www.reddit.com/r/homelab/wiki/software
-- Homer dashboard?
-- https://gitea.io
 - jenkins or other CI?
 - mbx + management UI
-- Wireguard/tailscale
-- Grafana?
-- pihole
 - ghost/blog
 - mediawiki/docuwiki
 - https://www.home-assistant.io/
-- https://nextcloud.com
-- eth/mining?
-- pfsense?
 - mqtt?
 - IP sec-cams?
 - deluge + plex? https://jellyfin.org? https://emby.media? couchpotato
@@ -45,12 +31,6 @@ To play with:
 - Duplicati
 - IPAM: https://netbox.readthedocs.io/en/stable/
 - https://github.com/awesome-selfhosted/awesome-selfhosted
-
-### VMs
-
-### pivpn
-
-OpenVPN
 
 ### k3s
 
@@ -128,8 +108,9 @@ spec:
 
 ```
 
+To reploy app say `hello-k3s`, first add a namespace in Portainer and assing a domain; next in app deployment specify/select deployment.
+
 Gitops experiment:
 - https://github.com/yadavcloud/hello-k3s/actions
 - https://hub.docker.com/r/bhaisaab/hello-k3s
-- Public app: https://yadav.cloud/app
-- Private app: http://hello.x32.in
+- Testing: https://hello.ya3.in
