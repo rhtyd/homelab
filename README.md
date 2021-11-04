@@ -109,13 +109,23 @@ export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
 ## Enable traefik dashboard
 
-Apply traefik dashboard access on: http://kubepi.x32.in/dashboard/
+Apply traefik dashboard access on: http://<domain>/dashboard/
 
-cp /var/lib/rancher/k3s/server/manifests/traefik.yaml  traefik.yaml
-add the following and apply the yaml:
-    dashboard:
-        enabled: true
-        domain: "kubepi.x32.in"
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dashboard
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`<replace domain here>`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+      kind: Rule
+      services:
+        - name: api@internal
+          kind: TraefikService
+
+
 ```
 
 Gitops experiment:
